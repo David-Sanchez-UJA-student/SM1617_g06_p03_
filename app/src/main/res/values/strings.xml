@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Practica2</string>
+    <string name="main_title">oooo</string>
+    <string name="Nombre">Name</string>
+    <string name="Password">Pass</string>
+    <string name="Puerto">Puerto</string>
+    <string name="IP">IP</string>
+    <string name="IP_Exam">XXX.XXX.XXX.XXX</string>
+    <string name="Connect">Conectar</string>
+    <string name="Informacion">Esta es una práctica de iniciación a la programación en Android</string>
+    <string name="org">Origen</string>
+    <string name="dest">Destino</string>
+    <string name="fecha">Fecha</string>
+    <string name="Send">Enviar</string>
+</resources>

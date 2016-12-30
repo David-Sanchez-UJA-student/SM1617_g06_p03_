@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    >
+
+
+    <TextView
+        android:text="@string/IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewIP"
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ViewPort"
+        android:layout_alignStart="@id/ViewPort"
+        android:layout_alignBaseline="@id/IP"
+         />
+
+    <TextView
+        android:text="@string/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewPass"
+        android:layout_alignBaseline="@+id/Pass"
+        android:layout_alignBottom="@+id/Pass"
+        android:layout_alignParentStart="true"
+         />
+
+    <Button
+        android:text="@string/Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton1"
+        android:layout_below="@+id/IP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/IP_Exam"
+        android:id="@+id/IP"
+        android:layout_below="@id/port"
+        android:layout_alignStart="@id/port"
+         />
+
+    <TextView
+        android:text="@string/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ViewName"
+        android:layout_alignBaseline="@+id/Nombre"
+
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/Pass"
+        android:layout_below="@+id/Nombre"
+        android:layout_alignStart="@+id/Nombre" />
+
+    <TextView
+        android:text="@string/Puerto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ViewPort"
+        android:layout_alignBaseline="@+id/Nombre"
+        android:layout_alignBottom="@+id/Nombre"
+        android:layout_alignEnd="@+id/boton1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/port"
+        tools:text="@string/Puerto"
+        android:layout_marginStart="26dp"
+        android:layout_alignTop="@+id/ViewName"
+        android:layout_toEndOf="@id/ViewPort"
+        android:layout_alignBaseline="@id/ViewPort"
+         />
+
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:id="@+id/Nombre"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@id/ViewName"
+        />
+</RelativeLayout>

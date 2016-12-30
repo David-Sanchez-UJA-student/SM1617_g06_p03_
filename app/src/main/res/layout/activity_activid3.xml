@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_activid3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dimanxe.prueba1.com.example.dimanxe.practica3.Activid3">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="27dp"
+        android:id="@+id/cabecera"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="49dp"
+        android:id="@+id/editOrigen"
+        android:layout_below="@+id/cabecera"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:layout_toEndOf="@+id/button"
+        android:hint="@string/org"
+        android:layout_alignStart="@+id/button" />
+
+    <TextView
+        android:text="@string/org"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editOrigen"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:id="@+id/OrgView"
+        android:layout_alignBottom="@+id/editOrigen"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editOrigen"
+        android:layout_alignEnd="@+id/editOrigen"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editDestino"
+        android:layout_alignStart="@+id/editOrigen"
+        android:hint="@string/dest" />
+
+    <TextView
+        android:text="@string/dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editDestino"
+        android:layout_alignEnd="@+id/OrgView"
+        android:id="@+id/DestView"
+        android:layout_alignBottom="@+id/editDestino"
+        tools:text="@string/dest" />
+
+    <TextView
+        android:text="@string/fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/DestView"
+        android:id="@+id/FechaView"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:layout_alignTop="@+id/FechaView"
+        android:layout_alignEnd="@+id/editDestino"
+        android:id="@+id/editFecha"
+        android:layout_alignStart="@+id/editDestino"
+        android:layout_alignBottom="@+id/FechaView" />
+
+    <Button
+        android:text="@string/Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/editFecha"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
