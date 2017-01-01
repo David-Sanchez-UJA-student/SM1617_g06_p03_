@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dimanxe.prueba1">
+    package="com.example.dimanxe.practica3">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,16 +10,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.dimanxe.practica3.Primer">
+        <activity android:name=".Primer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.dimanxe.practica3.Activid2" />
-        <activity android:name="com.example.dimanxe.practica3.Activid3" />
-
+        <activity android:name=".Activid2" />
+        <activity android:name=".Activid3" />
+        <activity android:name=".Activid4"></activity>
     </application>
 
 </manifest>

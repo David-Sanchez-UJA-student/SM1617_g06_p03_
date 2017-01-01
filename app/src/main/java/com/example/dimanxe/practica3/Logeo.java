@@ -9,8 +9,19 @@ public class Logeo {
 
     private String Sid;
     private String Expires;
-    private String user;
-    private String pass;
+    private String user="";
+    private String pass="";
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    private String ip="";
+    public int port=6000;
 
     Logeo(){
 

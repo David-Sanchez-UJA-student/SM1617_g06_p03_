@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.content.Intent;
 
-import com.example.dimanxe.prueba1.R;
+
 
 /**
  * Created by dimanxe on 06/10/2016.
@@ -101,7 +101,7 @@ public class AuthFragment extends Fragment{
         pass=(EditText)fragmento.findViewById(R.id.Pass);
         port=(EditText)fragmento.findViewById(R.id.port);
         ip=(EditText)fragmento.findViewById(R.id.IP);
-        //autent.getmUser();
+        user.setText(autent.getmUser());
         Button boton = (Button)fragmento.findViewById(R.id.boton1);
         boton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){

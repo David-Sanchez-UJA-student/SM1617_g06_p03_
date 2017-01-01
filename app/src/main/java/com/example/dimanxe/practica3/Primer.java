@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.dimanxe.prueba1.R;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -30,9 +30,9 @@ public class Primer extends AppCompatActivity {
             if (!log.getExpires().equals("EXPIRED")){
                 SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd-H-m-s");
                 long exp=0;
-                long exp2 = System.currentTimeMillis()+3600000;
+                long exp2 = System.currentTimeMillis();
                 try {
-                    exp=dt1.parse(log.getExpires()).getTime()+360000;
+                    exp=dt1.parse(log.getExpires()).getTime();
                     //exp2=dt1.parse(log.getExpires()).getTime();
                 } catch (ParseException e) {
                     e.printStackTrace();

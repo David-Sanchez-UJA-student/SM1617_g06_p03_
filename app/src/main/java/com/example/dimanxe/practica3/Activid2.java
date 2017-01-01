@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.dimanxe.prueba1.R;
+
 
 import java.util.concurrent.ExecutionException;
 

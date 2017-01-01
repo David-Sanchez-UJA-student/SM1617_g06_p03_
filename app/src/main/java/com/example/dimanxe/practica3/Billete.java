@@ -11,6 +11,16 @@ public class Billete {
     private int Nplazas;
     private int idbillete;
 
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    private String hora;
+
     public Billete(){
 
     }

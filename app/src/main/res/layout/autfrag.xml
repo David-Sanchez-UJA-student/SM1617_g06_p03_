@@ -12,6 +12,7 @@
         android:id="@+id/ViewName"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         />
     <EditText
 
@@ -32,7 +33,10 @@
         android:id="@+id/Pass"
         android:layout_below="@id/Nombre"
         android:layout_alignStart="@+id/boton1"
-        android:layout_alignEnd="@+id/boton1" />
+        android:layout_alignLeft="@id/boton1"
+        android:layout_alignEnd="@+id/boton1"
+        android:layout_alignRight="@id/boton1"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -52,7 +56,9 @@
         android:id="@+id/ViewPort"
         android:layout_alignBaseline="@+id/port"
         android:layout_alignBottom="@+id/port"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        />
 
     <TextView
         android:text="@string/IP"
@@ -73,6 +79,7 @@
         android:layout_alignBaseline="@+id/Pass"
         android:layout_alignBottom="@+id/Pass"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
          />
 
     <Button

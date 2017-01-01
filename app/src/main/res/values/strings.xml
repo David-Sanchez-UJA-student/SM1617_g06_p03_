@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Practica2</string>
+    <string name="app_name">Practica3</string>
     <string name="main_title">oooo</string>
     <string name="Nombre">Name</string>
     <string name="Password">Pass</string>
@@ -12,4 +12,8 @@
     <string name="dest">Destino</string>
     <string name="fecha">Fecha</string>
     <string name="Send">Enviar</string>
+    <string name="origen_prompt">Elija un origen</string>
+    <string name="Destino_prompt">Elija un destino</string>
+    <string name="FechaValue">dd-MM-AAAA</string>
+    <string name="Billetes">Billetes:</string>
 </resources>
