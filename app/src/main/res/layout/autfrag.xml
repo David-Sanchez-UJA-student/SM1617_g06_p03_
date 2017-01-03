@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:padding="@dimen/activity_horizontal_margin"
-    >
+    android:background="@android:color/darker_gray">
 
     <TextView
         android:text="@string/Nombre"
@@ -13,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        />
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
     <EditText
 
         android:layout_width="wrap_content"
@@ -58,7 +59,8 @@
         android:layout_alignBottom="@+id/port"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        />
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="@string/IP"
@@ -68,7 +70,9 @@
         android:layout_alignBaseline="@+id/IP"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/ViewPort"
-         />
+        android:textColorHighlight="@android:color/background_light"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="@string/Password"
@@ -80,7 +84,9 @@
         android:layout_alignBottom="@+id/Pass"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-         />
+        android:textColorHighlight="@android:color/background_light"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:text="@string/Connect"

@@ -5,13 +5,16 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context="com.example.dimanxe.practica3.Activid3"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@android:color/darker_gray">
 
     <TextView
         android:id="@+id/tv_Origen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/org" />
+        android:text="@string/org"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <Spinner
         android:id="@+id/sp_Org"
@@ -25,7 +28,9 @@
         android:id="@+id/tv_Dest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dest" />
+        android:text="@string/dest"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <Spinner
         android:id="@+id/sp_Dest"
@@ -39,7 +44,9 @@
         android:text="@string/fecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_Fecha" />
+        android:id="@+id/tv_Fecha"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light" />
 
     <EditText
         android:layout_width="match_parent"
