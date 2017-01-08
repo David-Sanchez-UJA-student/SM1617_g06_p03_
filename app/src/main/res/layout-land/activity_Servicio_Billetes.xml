@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,12 +24,10 @@
             android:layout_height="wrap_content" >
         </ProgressBar>
     </RelativeLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
     <LinearLayout
         android:id="@+id/Billetes_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="2dp"
@@ -102,11 +100,12 @@
         android:onClick="enviarSolicitud"
         android:text="@string/Send"
         android:id="@+id/button" />
+
+    </LinearLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/billetes_frame"
-    ></FrameLayout>
-    </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        android:layout_toRightOf="@+id/Billetes_layout"
+        android:layout_toEndOf="@+id/Billetes_layout" />
+</RelativeLayout>

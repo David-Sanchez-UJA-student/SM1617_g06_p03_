@@ -21,7 +21,7 @@ import java.util.LinkedList;
         public static final String PREFS_NAME = "MyPrefsFile";
         LinkedList<Billete> bils;
         Context context;
-        int [] imageId;
+
         private static LayoutInflater inflater=null;
         public CustomAdapter(Context mainActivity, LinkedList<Billete> bills) {
             // TODO Auto-generated constructor stub
@@ -69,6 +69,7 @@ import java.util.LinkedList;
             holder.tv1.setText(bils.get(position).getOrigen()+"-"+bils.get(position).getDestino());
             holder.tv2.setText(context.getString(R.string.fecha) +":\t"+bils.get(position).getFecha()+"\t"+bils.get(position).getHora());
             holder.tv3.setText(context.getString(R.string.IDBillete) +"\t"+bils.get(position).getIdbillete()+"\t"+context.getString(R.string.precio)+bils.get(position).getPrecio()+context.getString(R.string.euro));
+            rowView.setTag(holder);
             rowView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

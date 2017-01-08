@@ -7,13 +7,7 @@
     android:scrollbars="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
     >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
 
 
@@ -34,6 +28,5 @@
         android:divider="@color/colorbackground"
         android:dividerHeight="1dp">
     </ListView>
-    </LinearLayout>
-    </ScrollView>
+
 </LinearLayout> 
