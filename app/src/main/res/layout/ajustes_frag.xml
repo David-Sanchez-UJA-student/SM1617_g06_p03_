@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        style="@style/text_style"
+        android:text="@string/Actualizar"
+        android:layout_marginTop="54dp"
+        android:id="@+id/bt_actualizar"
+        android:layout_below="@+id/et_IP"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:text="@string/action_settings"
+        android:id="@+id/tv_info"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:id="@+id/tv_port"
+        android:text="@string/Puerto"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tv_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:id="@+id/et_port"
+        android:inputType="number"
+        android:layout_alignBaseline="@+id/tv_port"
+        android:layout_alignBottom="@+id/tv_port"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/bt_actualizar"
+        android:layout_alignStart="@+id/bt_actualizar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:id="@+id/tv_IP"
+        android:text="@string/IP"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/et_port"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/tv_port"
+        android:layout_alignEnd="@+id/tv_port" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:id="@+id/et_IP"
+        android:hint="@string/IP_Exam"
+        android:inputType="number|numberDecimal"
+        android:digits="0123456789."
+        android:layout_alignBaseline="@+id/tv_IP"
+        android:layout_alignBottom="@+id/tv_IP"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/et_port"
+        android:layout_alignStart="@+id/et_port" />
+</RelativeLayout>

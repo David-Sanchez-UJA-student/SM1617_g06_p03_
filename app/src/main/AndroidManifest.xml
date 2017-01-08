@@ -10,16 +10,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Primer">
+        <activity android:name=".Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activid2" />
-        <activity android:name=".Activid3" />
-        <activity android:name=".Activid4"></activity>
+        <activity android:name=".Servicio_Billetes" />
     </application>
 
 </manifest>

@@ -10,6 +10,15 @@ public class Billete {
     private String fecha;
     private int Nplazas;
     private int idbillete;
+    private float precio;
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
 
     public String getHora() {
         return hora;

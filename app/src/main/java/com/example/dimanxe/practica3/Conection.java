@@ -1,9 +1,13 @@
 package com.example.dimanxe.practica3;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -21,9 +25,33 @@ import java.net.SocketAddress;
 public class Conection extends AsyncTask<String,Float,Logeo> {
     public static final String PREFS_NAME = "MyPrefsFile";
     private Context con;
+    private FragmentActivity v;
+    RelativeLayout linlaHeaderProgress = null;
+    RelativeLayout content =null;
 
-    Conection (Context con){
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        linlaHeaderProgress=(RelativeLayout)v.findViewById(R.id.linlaHeaderProgress1);
+        content=(RelativeLayout) v.findViewById(R.id.main);
+        content.post(new Runnable() {
+            @Override
+            public void run() {
+                content.setVisibility(View.GONE);
+            }
+        });
+        linlaHeaderProgress.post(new Runnable() {
+            @Override
+            public void run() {
+                linlaHeaderProgress.setVisibility(View.VISIBLE);
+            }
+        });
+
+    }
+
+    Conection (Context con,FragmentActivity v){
         this.con=con;
+        this.v=v;
     }
 
 
@@ -45,7 +73,7 @@ public class Conection extends AsyncTask<String,Float,Logeo> {
 
         BufferedReader is = null;
         try {
-            SocketAddress sockaddr= new InetSocketAddress(aut.getmIP(),aut.mPort);//TODO cambiar aquí los datos por los que se introducen desde el telefono
+            SocketAddress sockaddr= new InetSocketAddress(aut.getmIP(),aut.mPort);
             sClient = new Socket();
             sClient.connect(sockaddr,5000);
             is = new BufferedReader(new InputStreamReader(sClient.getInputStream()));
@@ -57,7 +85,7 @@ public class Conection extends AsyncTask<String,Float,Logeo> {
         int count = 0;
         if (sClient != null && is != null && output != null) {
             try {
-                output.writeBytes("USER "+aut.getmUser()+"\r\n");//TODO idem
+                output.writeBytes("USER "+aut.getmUser()+"\r\n");
                 output.writeBytes("PASS "+aut.getmPass()+"\r\n");
                 output.writeBytes("QUIT\r\n");
                 String responseLine;
@@ -98,6 +126,8 @@ public class Conection extends AsyncTask<String,Float,Logeo> {
     @Override
     protected void onPostExecute(Logeo s) {
         super.onPostExecute(s);
+        linlaHeaderProgress=(RelativeLayout)v.findViewById(R.id.linlaHeaderProgress1);
+        content=(RelativeLayout) v.findViewById(R.id.main);
         SharedPreferences.Editor editor=con.getSharedPreferences(PREFS_NAME, con.MODE_PRIVATE).edit();
         editor.putString("user",s.getUser());
         editor.putString("sID", s.getSid());
@@ -105,6 +135,18 @@ public class Conection extends AsyncTask<String,Float,Logeo> {
         editor.putString("PWD",s.getPass());
         editor.putString("IP",s.getIp());
         editor.commit();
+        content.post(new Runnable() {
+            @Override
+            public void run() {
+                content.setVisibility(View.VISIBLE);
+            }
+        });
+        linlaHeaderProgress.post(new Runnable() {
+            @Override
+            public void run() {
+                linlaHeaderProgress.setVisibility(View.GONE);
+            }
+        });
 
     }
 }

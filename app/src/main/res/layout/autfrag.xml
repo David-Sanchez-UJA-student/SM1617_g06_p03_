@@ -2,77 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin"
-    android:background="@android:color/darker_gray">
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+
+
 
     <TextView
-        android:text="@string/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ViewName"
-        android:layout_alignParentTop="true"
+        android:text="@string/Identificacion"
+        android:id="@+id/texto"
+        style="@style/text_style"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_light" />
-    <EditText
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text=""
-        android:id="@+id/Nombre"
-        android:layout_alignBaseline="@id/ViewName"
-        android:layout_centerHorizontal="true"
-         />
+        android:layout_alignParentTop="true"
+        android:paddingBottom="15dp"
+        />
 
 
     <EditText
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:id="@+id/Pass"
-        android:layout_below="@id/Nombre"
-        android:layout_alignStart="@+id/boton1"
-        android:layout_alignLeft="@id/boton1"
-        android:layout_alignEnd="@+id/boton1"
-        android:layout_alignRight="@id/boton1"
+        android:layout_below="@+id/Nombre"
+        android:layout_alignStart="@+id/Nombre"
+        android:layout_alignLeft="@id/Nombre"
+        android:layout_alignEnd="@+id/Nombre"
+        android:layout_alignRight="@id/Nombre"
         />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/port"
-        android:layout_below="@+id/Pass"
-        tools:text="@string/Puerto"
-        android:layout_centerHorizontal="true"/>
-
-
-    <TextView
-        android:text="@string/Puerto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/ViewPort"
-        android:layout_alignBaseline="@+id/port"
-        android:layout_alignBottom="@+id/port"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_light" />
-
-    <TextView
-        android:text="@string/IP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewIP"
-        android:layout_alignBaseline="@+id/IP"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/ViewPort"
-        android:textColorHighlight="@android:color/background_light"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="@string/Password"
@@ -84,26 +49,62 @@
         android:layout_alignBottom="@+id/Pass"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:textColorHighlight="@android:color/background_light"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_light" />
+        style="@style/text_style"
+         />
 
     <Button
+        style="@style/text_style"
+        android:background="@drawable/button"
         android:text="@string/Connect"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:id="@+id/boton1"
-        android:layout_below="@+id/IP"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:text=""
+        android:id="@+id/Nombre"
+        android:layout_below="@+id/texto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/boton1"
+        android:layout_alignStart="@+id/boton1" />
 
-        android:hint="@string/IP_Exam"
-        android:id="@+id/IP"
-        android:layout_below="@id/port"
-        android:layout_centerHorizontal="true" />
+    <TextView
+        android:text="@string/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ViewName"
+
+
+        style="@style/text_style"
+        android:layout_alignBaseline="@+id/Nombre"
+        android:layout_alignBottom="@+id/Nombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/linlaHeaderProgress1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+    </RelativeLayout>
 </RelativeLayout>

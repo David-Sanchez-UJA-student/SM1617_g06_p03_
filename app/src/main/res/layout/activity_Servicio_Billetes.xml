@@ -1,0 +1,120 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+
+    android:paddingTop="10dp"
+
+    tools:context="com.example.dimanxe.practica3.Servicio_Billetes"
+    android:weightSum="1"
+    style="@style/text_style">
+    <RelativeLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/Billetes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Busqueda_billete"
+            />
+    <TextView
+        android:id="@+id/tv_Origen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/org"
+        style="@style/text_style" />
+
+    <Spinner
+        style="@style/text_style"
+        android:id="@+id/sp_Org"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:prompt="@string/origen_prompt"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@color/ListView"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_Dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dest"
+        style="@style/text_style" />
+
+    <Spinner
+        style="@style/text_style"
+        android:id="@+id/sp_Dest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:prompt="@string/Destino_prompt"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@color/ListView"
+
+        />
+
+    <TextView
+        android:text="@string/fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Fecha"
+        style="@style/text_style" />
+
+    <EditText
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/eT_Fecha"
+        android:hint="@string/FechaValue"
+        />
+
+    <Button
+        style="@style/text_style"
+        android:background="@drawable/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="enviarSolicitud"
+        android:text="@string/Send"
+        android:id="@+id/button" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/billetes_frame"
+        ></FrameLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
